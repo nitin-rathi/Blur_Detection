@@ -8,4 +8,5 @@ There are many methods to identify blurred images. Some of these are:
 In this code, I implement the last two approaches. The CNN is trained on 3000 images from FFHQ dataset where half the images are blurred with Gaussian blur having radius between 3 and 9. The blurring is perfomed on only 50% of the pixels in the image because in the test images some examples have blurring in only certain regions of the image (moving mouth). The network is trained to perform binary classification. The trained network is tested on the custom dataset of human faces. After evaluation, the blurred and clean images are stored in different folders
 
 #Improvements
-The deep learining model can be improved by trying different kind of blurring effects during training. The Also, the model can be improved by choosing a deeper VGG or ResNet architecture.
+- The deep learining model can be improved by employing datasets that provide face location and blurring only the face and not the background. Currently, many of the images that are classified as blurred have sharp face but blurry background due to out of focus.
+- Model can be improved by choosing a deeper VGG or ResNet architecture.
