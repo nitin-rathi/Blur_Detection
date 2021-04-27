@@ -56,7 +56,7 @@ class FacesDataset(Dataset):
 		label = torch.round(torch.rand(1)).long()
 		# 1->blurred, 0->original
 		if label==1:
-			radius = torch.randint(low=3, high=7, size=(1,))
+			radius = torch.randint(low=3, high=5, size=(1,))
 			random = torch.round(torch.rand(1)).long()
 			if random==1:
 				image_blurred = image.filter(ImageFilter.BoxBlur(radius=radius))
